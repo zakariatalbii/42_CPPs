@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 04:45:00 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/06 08:26:33 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/01/07 00:14:50 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	main(int argc, char **argv)
 	else
 	{
 		Harl		harl;
+		std::string	arg (argv[1]);
 		std::string	levels[4] = 
 		{
 			"DEBUG",
@@ -28,7 +29,7 @@ int	main(int argc, char **argv)
 		};
 
 		int i (0);
-		while (i < 4 && levels[i] != argv[1])
+		while (i < 4 && levels[i] != arg)
 			i++;
 		switch (i)
 		{

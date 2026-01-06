@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 16:59:19 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/03 13:35:35 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/01/07 00:35:17 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,7 @@ bool	getLine(std::string &str)
 	std::getline(std::cin, str);
 	std::cout << '\n';
 	if (std::cin.eof())
-	{
-		std::cout << "EOF\n";
-		return (false);
-	}
+		return (std::cout << "EOF\n", false);
 	return (true);
 }
 
@@ -40,7 +37,7 @@ bool	prompt(std::string &str)
 
 bool	emptyField(const std::string &str)
 {
-	if (str.empty())
+	if (str.empty() || str.find_first_not_of(" \t\v\r\f\n") == std::string::npos)
 		return (std::cout << "\tA saved contact can't have empty fields.\n\n", true);
 	return (false);
 }

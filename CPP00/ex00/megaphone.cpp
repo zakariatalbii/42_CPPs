@@ -6,19 +6,27 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 16:59:19 by zatalbi           #+#    #+#             */
-/*   Updated: 2025/12/31 20:22:58 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/01/07 00:21:12 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <string>
 #include <cctype>
 
 int	main(int argc, char **argv)
 {
+	std::string	s;
+
 	if (argc > 1)
-		for (int i (1); argv[i]; i++)
-			for (int j (0); argv[i][j]; j++)
-				std::cout << (char)std::toupper(argv[i][j]);
+	{
+		for (int i (1); i < argc; i++)
+		{
+			s = argv[i];
+			for (size_t j (0); j < s.length(); j++)
+				std::cout << (char)std::toupper(s[j]);
+		}
+	}
 	else
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 	std::cout << std::endl;

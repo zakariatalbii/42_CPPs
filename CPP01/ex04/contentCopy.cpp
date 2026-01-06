@@ -6,14 +6,14 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 19:34:13 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/06 04:22:05 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/01/06 23:53:15 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "losers.hpp"
 
 static void	rePlace(std::ofstream &oFile, std::string &s,
-			const char *s1, const char *s2)
+			std::string &s1, std::string &s2)
 {
 	std::size_t pos;
 	std::size_t found;
@@ -29,12 +29,12 @@ static void	rePlace(std::ofstream &oFile, std::string &s,
 			oFile << s.substr(pos);
 			break ;
 		}
-		pos = found + std::strlen(s1);
+		pos = found + s1.length();
 	}
 }
 
 void	contentCopy(std::ifstream &iFile, std::ofstream &oFile,
-			const char *s1, const char *s2)
+			std::string &s1, std::string &s2)
 {
 	std::string	s;
 
