@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 16:59:19 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/07 00:35:17 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/01/08 00:50:20 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,18 @@ bool	prompt(std::string &str)
 	return (true);
 }
 
+bool	isPrint(const std::string &str)
+{
+	for (size_t i (0); i < str.length(); i++)
+		if (!std::isprint(str[i]))
+			return (false);
+	return (true);
+}
+
 bool	emptyField(const std::string &str)
 {
-	if (str.empty() || str.find_first_not_of(" \t\v\r\f\n") == std::string::npos)
+	if (str.empty() || !isPrint(str)
+		|| str.find_first_not_of(" \t\v\r\f\n") == std::string::npos)
 		return (std::cout << "\tA saved contact can't have empty fields.\n\n", true);
 	return (false);
 }
@@ -55,7 +64,7 @@ char	tenChar(const std::string &str)
 	if (str.length() > 10)
 		std::cout << std::setw(9) << str.substr(0, 9) << '.';
 	else
-		std::cout << std::setw(10)<< str;
+		std::cout << std::setw(10) << str;
 	return ('\0');
 }
 

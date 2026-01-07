@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 16:59:19 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/03 13:35:50 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/01/08 00:39:43 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 # define _PHONEBOOK_HPP_
 
 # include <iostream>
-# include <string>
 # include <iomanip>
+# include <string>
+# include <cctype>
 # include "Contact.hpp"
 # include "PhoneBook.hpp"
 
