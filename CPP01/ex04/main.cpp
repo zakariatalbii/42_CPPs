@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 19:34:13 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/06 23:59:46 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/01/08 04:40:02 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ int	main(int argc, char **argv)
 		argv[2],
 		argv[3]
 	};
-	if (args[1].find_first_of('\n') != std::string::npos)
-		return (std::cout << "<s1> with new line.\n", 1);
 	std::ifstream	iFile (args[0].data());
 	if (!iFile)
 		return (std::cout << args[0] << " could not be opened for reading.\n", 1);

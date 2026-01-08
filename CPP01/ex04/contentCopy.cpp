@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 19:34:13 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/06 23:53:15 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/01/08 05:39:05 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,13 @@ void	contentCopy(std::ifstream &iFile, std::ofstream &oFile,
 
 	while (true)
 	{
-		std::getline(iFile, s);
-		rePlace(oFile, s, s1, s2);
-		if (iFile.eof())
+		if (!std::getline(iFile, s))
 			break ;
+		if (!iFile.eof())
+			s += '\n';
+		if (s1.length())
+			rePlace(oFile, s, s1, s2);
 		else
-			oFile << '\n';
+			oFile << s;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 20:06:07 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/04 23:58:15 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/01/08 02:04:23 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,12 @@
 
 Zombie	*zombieHorde(int N, std::string name)
 {
-	Zombie	*zombie (new Zombie[N]);
+	if (!N)
+		return ((Zombie *)0);
+	Zombie	*zombie (new (std::nothrow) Zombie[N]);
+
+	if (!zombie)
+		return ((Zombie *)0);
 	Zombie	tmp (name);
 
 	for (int i (0); i < N; i++)
