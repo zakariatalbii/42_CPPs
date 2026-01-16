@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 04:46:32 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/06 08:19:35 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/01/16 04:30:34 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,10 @@ void	Harl::complain(std::string level)
 
 	for (int i (0); i < 4; i++)
 	{
-		while (levels[i] == level)
+		if (levels[i] == level)
 		{
 			(this->*complainLevel[i])();
-			return ;
+			break ;
 		}
 	}
 }
