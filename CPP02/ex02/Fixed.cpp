@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 15:32:34 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/11 02:01:34 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/01/22 00:47:11 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,10 @@ Fixed::~Fixed()
 {
 }
 
-const Fixed	&Fixed::operator=(const Fixed &src)
+Fixed	&Fixed::operator=(const Fixed &src)
 {
 	rawBits = src.getRawBits();
-	return (src);
+	return (*this);
 }
 
 bool	Fixed::operator>(const Fixed &src)	const
@@ -189,4 +189,9 @@ const Fixed	&Fixed::max(const Fixed &fix1, const Fixed &fix2)
 	if (fix1 > fix2)
 		return (fix1);
 	return (fix2);
+}
+
+std::ostream	&operator<<(std::ostream &out, const Fixed &src)
+{
+	return (out << src.getRawBits() / std::pow(2, src.getFractBits()));
 }

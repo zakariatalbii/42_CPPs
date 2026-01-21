@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 15:32:34 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/10 23:50:29 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/01/22 00:46:24 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Fixed
 		Fixed(const int val);
 		Fixed(const float val);
 		~Fixed();
-		const Fixed	&operator=(const Fixed &src);
+		Fixed		&operator=(const Fixed &src);
 		bool		operator>(const Fixed &src)	const;
 		bool		operator>=(const Fixed &src)	const;
 		bool		operator<(const Fixed &src)	const;
@@ -52,5 +52,7 @@ class Fixed
 		static Fixed		&max(Fixed &fix1, Fixed &fix2);
 		static const Fixed	&max(const Fixed &fix1, const Fixed &fix2);
 };
+
+std::ostream	&operator<<(std::ostream &out, const Fixed &src);
 
 #endif

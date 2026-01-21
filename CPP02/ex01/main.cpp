@@ -6,16 +6,11 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 15:32:34 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/10 05:56:43 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/01/22 00:44:56 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-
-std::ostream	&operator<<(std::ostream &out, const Fixed &src)
-{
-	return (out << src.getRawBits() / std::pow(2, src.getFractBits()));
-}
 
 int	main(void)
 {

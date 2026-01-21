@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 15:32:34 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/10 05:51:15 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/01/22 00:45:14 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,11 @@ Fixed::~Fixed()
 	std::cout << "Destructor called\n";
 }
 
-const Fixed	&Fixed::operator=(const Fixed &src)
+Fixed	&Fixed::operator=(const Fixed &src)
 {
 	std::cout << "Copy assignment operator called\n";
 	rawBits = src.getRawBits();
-	return (src);
+	return (*this);
 }
 
 int	Fixed::getFractBits(void)	const
@@ -73,4 +73,9 @@ int	Fixed::toInt(void)	const
 float	Fixed::toFloat(void)	const
 {
 	return (rawBits / std::pow(2, fractBits));
+}
+
+std::ostream	&operator<<(std::ostream &out, const Fixed &src)
+{
+	return (out << src.getRawBits() / std::pow(2, src.getFractBits()));
 }

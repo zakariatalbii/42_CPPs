@@ -5,27 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/06 15:32:34 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/22 00:46:45 by zatalbi          ###   ########.fr       */
+/*   Created: 2026/01/14 05:38:54 by zatalbi           #+#    #+#             */
+/*   Updated: 2026/01/22 00:23:34 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main(void)
 {
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+	ClapTrap	putin ("Putin");
+	ScavTrap	trump ("Trump");
+	FragTrap	kimJongUn ("KimJongUn");
 
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
+	trump.guardGate();
+	putin.attack("Trump");
+	trump.takeDamage(0);
+	trump.attack("Putin");
+	putin.takeDamage(20);
+	putin.beRepaired(20);
+	kimJongUn.attack("Trump");
+	trump.takeDamage(30);
+	trump.attack("KimJongUn");
+	kimJongUn.takeDamage(20);
+	kimJongUn.beRepaired(20);
+	kimJongUn.highFivesGuys();
 
-	std::cout << b << std::endl;
-
-	std::cout << Fixed::max( a, b ) << std::endl;
-
-	return 0;
+	return (0);
 }

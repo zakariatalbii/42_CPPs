@@ -5,27 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/06 15:32:34 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/22 00:46:45 by zatalbi          ###   ########.fr       */
+/*   Created: 2026/01/14 05:38:54 by zatalbi           #+#    #+#             */
+/*   Updated: 2026/01/21 21:33:40 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "ScavTrap.hpp"
 
 int	main(void)
 {
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+	ClapTrap	putin ("Putin");
+	ScavTrap	trump ("Trump");
 
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
+	trump.guardGate();
+	putin.attack("Trump");
+	trump.takeDamage(0);
+	trump.attack("Putin");
+	putin.takeDamage(20);
+	putin.beRepaired(20);
 
-	std::cout << b << std::endl;
-
-	std::cout << Fixed::max( a, b ) << std::endl;
-
-	return 0;
+	return (0);
 }
