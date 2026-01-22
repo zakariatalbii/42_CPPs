@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 08:30:04 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/21 21:13:42 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/01/22 20:47:50 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,10 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	{
 		std::cout << "ClapTrap " << name << " repairs itself, it regains " << amount
 					<< " hit points!\n";
-		hitPoints += amount;
+		if (hitPoints >= UINT_MAX - amount)
+			hitPoints = UINT_MAX;
+		else
+			hitPoints += amount;
 		energyPoints--;
 	}
 	else if (!hitPoints)
