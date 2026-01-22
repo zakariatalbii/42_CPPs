@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/06 15:32:34 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/22 16:09:34 by zatalbi          ###   ########.fr       */
+/*   Created: 2026/01/17 08:30:04 by zatalbi           #+#    #+#             */
+/*   Updated: 2026/01/22 13:13:16 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
-int	main(void)
+# include <iostream>
+# include <string>
+
+class WrongAnimal
 {
-	Fixed a;
-	Fixed b( a );
-	Fixed c;
+	protected:
+		std::string	type;
+	public:
+		WrongAnimal();
+		WrongAnimal(const WrongAnimal &src);
+		~WrongAnimal();
+		WrongAnimal			&operator=(const WrongAnimal &src);
+		void				makeSound()	const;
+		const std::string	&getType()	const;
+};
 
-	c = b;
-
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
-
-	return 0;
-}
+#endif

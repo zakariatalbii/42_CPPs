@@ -5,31 +5,42 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/06 15:32:34 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/22 16:09:25 by zatalbi          ###   ########.fr       */
+/*   Created: 2026/01/14 05:38:54 by zatalbi           #+#    #+#             */
+/*   Updated: 2026/01/22 18:57:19 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
 
 int	main(void)
 {
-	Fixed a;
-	Fixed const b( 10 );
-	Fixed const c( 42.42f );
-	Fixed const d( b );
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
+	const Animal* animal[6];
+	// Animal	k;
 
-	a = Fixed( 1234.4321f );
+	for (int i = 0; i < 3; i++)
+		animal[i] = new Dog();
+	for (int i = 3; i < 6; i++)
+		animal[i] = new Cat();
 
-	std::cout << "a is " << a << std::endl;
-	std::cout << "b is " << b << std::endl;
-	std::cout << "c is " << c << std::endl;
-	std::cout << "d is " << d << std::endl;
+	{
+		Cat	tmpCat (*(Cat *)i);
+		Dog	tmpDog;
 
-	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
-	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
-	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+		tmpDog = *(Dog *)j;
+	}
+
+	std::cout << j->getType() << '\n';
+	std::cout << i->getType() << '\n';
+	i->makeSound();
+	j->makeSound();
+
+	for (int i = 0; i < 6; i++)
+		delete animal[i];
+	delete j;
+	delete i;
 
 	return 0;
 }

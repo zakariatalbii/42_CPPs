@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 05:38:54 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/22 00:23:34 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/01/22 13:49:31 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	main(void)
 	trump.attack("KimJongUn");
 	kimJongUn.takeDamage(20);
 	kimJongUn.beRepaired(20);
+	trump.beRepaired(30);
 	kimJongUn.highFivesGuys();
 
 	return (0);

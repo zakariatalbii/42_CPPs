@@ -1,14 +1,14 @@
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJS= $(SRCS:.cpp=.o)
 
-NAME = fragTrap
+NAME = animal
 
 CC = c++ -Wall -Wextra -Werror -std=c++98
 
 RM = rm -f
 
-%.o: %.cpp ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
+%.o: %.cpp Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp
 	$(CC) -c $< -o $@
 
 all: $(NAME)
