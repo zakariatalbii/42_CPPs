@@ -20,9 +20,9 @@ int	main(void)
 	const Animal* animal[6];
 	// Animal	k;
 
-	for (int i = 0; i < 3; i++)
+	for (int i (0); i < 3; i++)
 		animal[i] = new Dog();
-	for (int i = 3; i < 6; i++)
+	for (int i (3); i < 6; i++)
 		animal[i] = new Cat();
 
 	{
@@ -37,10 +37,10 @@ int	main(void)
 	i->makeSound();
 	j->makeSound();
 
-	for (int i = 0; i < 6; i++)
+	for (int i (0); i < 6; i++)
 		delete animal[i];
-	delete j;
 	delete i;
+	delete j;
 
 	return 0;
 }

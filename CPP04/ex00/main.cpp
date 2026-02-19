@@ -36,8 +36,8 @@ int	main(void)
 	
 	{
 		const WrongAnimal* meta = new WrongAnimal();
-		const WrongAnimal* i = new WrongCat();
-		const WrongCat* j = new WrongCat();
+		const WrongAnimal* j = new WrongCat();
+		const WrongCat* i = new WrongCat();
 
 		std::cout << j->getType() << " " << std::endl;
 		std::cout << i->getType() << " " << std::endl;
@@ -46,6 +46,7 @@ int	main(void)
 		meta->makeSound();
 
 		delete i;
+		delete j;
 		delete meta;
 	}
 
