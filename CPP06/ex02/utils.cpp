@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/22 18:16:47 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/06/22 20:51:55 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/06/26 14:00:57 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ Base	*generate(void)
 
 void	identify(Base *p)
 {
-	if (dynamic_cast<A *>(p))
+	if (dynamic_cast<A *>(p) != NULL)
 		std::cout << "p: A\n";
-	else if (dynamic_cast<B *>(p))
+	else if (dynamic_cast<B *>(p) != NULL)
 		std::cout << "p: B\n";
-	else if (dynamic_cast<C *>(p))
+	else if (dynamic_cast<C *>(p) != NULL)
 		std::cout << "p: C\n";
 }
 
@@ -38,7 +38,7 @@ void	identify(Base &p)
 {
 	try
 	{
-		dynamic_cast<A &>(p);
+		(void)dynamic_cast<A &>(p);
 		std::cout << "p: A\n";
     }
 	catch (std::exception &e)
@@ -46,7 +46,7 @@ void	identify(Base &p)
     }
 	try
 	{
-		dynamic_cast<B &>(p);
+		(void)dynamic_cast<B &>(p);
 		std::cout << "p: B\n";
     }
 	catch (std::exception &e)
@@ -54,7 +54,7 @@ void	identify(Base &p)
     }
 	try
 	{
-		dynamic_cast<C &>(p);
+		(void)dynamic_cast<C &>(p);
 		std::cout << "p: C\n";
     }
 	catch (std::exception &e)
