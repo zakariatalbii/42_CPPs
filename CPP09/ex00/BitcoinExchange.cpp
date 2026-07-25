@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/20 14:41:37 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/07/21 04:29:27 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/07/25 20:26:29 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ BitcoinExchange	&BitcoinExchange::operator=(BitcoinExchange const &other)
 	return (*this);
 }
 
-bool	BitcoinExchange::isLeapYear(int year)
+bool	BitcoinExchange::isLeapYear(int year)	const
 {
 	if (year % 400 == 0)
 		return (true);
@@ -94,7 +94,7 @@ bool	BitcoinExchange::isLeapYear(int year)
 	return (false);
 }
 
-bool	BitcoinExchange::isValidDate(std::string const &date)
+bool	BitcoinExchange::isValidDate(std::string const &date)	const
 {
 	if (date.length() != 10
 		|| date[4] != '-'
@@ -138,7 +138,7 @@ bool	BitcoinExchange::isValidDate(std::string const &date)
 	return (true);
 }
 
-bool	BitcoinExchange::isValidRate(std::string const &rate)
+bool	BitcoinExchange::isValidRate(std::string const &rate)	const
 {
 	if (rate.empty())
 		return (false);
@@ -159,7 +159,7 @@ bool	BitcoinExchange::isValidRate(std::string const &rate)
 	return (true);
 }
 
-bool	BitcoinExchange::isValidValue(std::string const &value)
+bool	BitcoinExchange::isValidValue(std::string const &value)	const
 {
 	if (value.empty())
 		return (false);
@@ -189,9 +189,9 @@ bool	BitcoinExchange::isValidValue(std::string const &value)
 	return (true);
 }
 
-double	BitcoinExchange::getExchangeRate(std::string const &date)
+double	BitcoinExchange::getExchangeRate(std::string const &date)	const
 {
-	std::map<std::string, double>::iterator	it = _db.upper_bound(date);
+	std::map<std::string, double>::const_iterator	it = _db.upper_bound(date);
 
 	if (it == _db.begin())
 		throw std::runtime_error ("Error: no exchange rate available.");
@@ -201,7 +201,7 @@ double	BitcoinExchange::getExchangeRate(std::string const &date)
 	return (it->second);
 }
 
-void	BitcoinExchange::processInput(char *file)
+void	BitcoinExchange::processInput(char *file)	const
 {
 	std::ifstream	input (file);
 

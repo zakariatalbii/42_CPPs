@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/20 14:41:35 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/07/21 04:33:41 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/07/25 20:26:34 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,18 @@ class BitcoinExchange
 	private:
 		std::map<std::string, double>	_db;
 
-		bool	isLeapYear(int year);
-		bool	isValidDate(std::string const &date);
-		bool	isValidRate(std::string const &rate);
-		bool	isValidValue(std::string const &value);
-		double	getExchangeRate(std::string const &date);
+		bool	isLeapYear(int year)	const;
+		bool	isValidDate(std::string const &date)	const;
+		bool	isValidRate(std::string const &rate)	const;
+		bool	isValidValue(std::string const &value)	const;
+		double	getExchangeRate(std::string const &date)	const;
 
 	public:
 		BitcoinExchange();
 		BitcoinExchange(BitcoinExchange const &other);
 		~BitcoinExchange();
 		BitcoinExchange	&operator=(BitcoinExchange const &other);
-		void			processInput(char *file);
+		void			processInput(char *file)	const;
 };
 
 #endif
