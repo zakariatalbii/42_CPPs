@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/03 16:05:45 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/07/03 16:34:23 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 19:41:23 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ T const	&min(T const &a, T const &b)
 {
 	if (a < b)
 		return (a);
+
 	return (b);
 }
 
@@ -38,6 +39,7 @@ T const	&max(T const &a, T const &b)
 {
 	if (a > b)
 		return (a);
+
 	return (b);
 }
 

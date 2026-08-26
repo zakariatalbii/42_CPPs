@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/03 16:05:45 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/07/04 04:47:11 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 19:42:50 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ Array<T>	&Array<T>::operator=(Array<T> const &other)
 		for (unsigned int i (0); i < _size; i++)
 			_a[i] = other._a[i];
 	}
+
 	return (*this);
 }
 
@@ -55,6 +56,7 @@ T	&Array<T>::operator[](unsigned int n)
 {
 	if (n < _size)
 		return _a[n];
+
 	throw std::exception ();
 }
 
@@ -63,6 +65,7 @@ const T	&Array<T>::operator[](unsigned int n)	const
 {
 	if (n < _size)
 		return _a[n];
+
 	throw std::exception ();
 }
 

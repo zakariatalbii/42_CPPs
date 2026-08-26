@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/03 16:05:45 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/07/03 18:47:20 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 19:41:53 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	iter(T *arr, unsigned int const length, void (*f)(T &))
 {
 	if (!arr || !f)
 		return ;
+
 	for (unsigned int i (0); i < length; i++)
 		f(arr[i]);
 }
@@ -30,6 +31,7 @@ void	iter(T const *arr, unsigned int const length, void (*f)(T const &))
 {
 	if (!arr || !f)
 		return ;
+
 	for (unsigned int i (0); i < length; i++)
 		f(arr[i]);
 }

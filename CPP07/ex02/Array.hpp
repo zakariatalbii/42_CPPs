@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/03 16:05:45 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/07/04 04:46:30 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 19:42:23 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Array
 	private:
 		T				*_a;
 		unsigned int	_size;
+
 	public:
 		Array();
 		Array(unsigned int n);
