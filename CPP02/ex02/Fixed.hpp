@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 15:32:34 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/22 00:46:24 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 18:14:15 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Fixed
 	private:
 		int					rawBits;
 		static const int	fractBits;
+
 	public:
 		Fixed();
 		Fixed(const Fixed &src);

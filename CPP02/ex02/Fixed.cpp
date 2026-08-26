@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 15:32:34 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/22 00:47:11 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 18:14:02 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ Fixed::~Fixed()
 Fixed	&Fixed::operator=(const Fixed &src)
 {
 	rawBits = src.getRawBits();
+
 	return (*this);
 }
 
@@ -79,6 +80,7 @@ const Fixed	Fixed::operator+(const Fixed &src)	const
 	Fixed	tmp;
 
 	tmp.setRawBits(rawBits + src.rawBits);
+
 	return (tmp);
 }
 
@@ -87,6 +89,7 @@ const Fixed	Fixed::operator-(const Fixed &src)	const
 	Fixed	tmp;
 
 	tmp.setRawBits(rawBits - src.rawBits);
+
 	return (tmp);
 }
 
@@ -97,6 +100,7 @@ const Fixed	Fixed::operator*(const Fixed &src)	const
 			(roundf((double)rawBits * src.rawBits / std::pow(2, fractBits)));
 
 	tmp.setRawBits(rawTmp);
+
 	return (tmp);
 }
 
@@ -107,12 +111,14 @@ const Fixed	Fixed::operator/(const Fixed &src)	const
 			(roundf((double)rawBits / src.rawBits * std::pow(2, fractBits)));
 
 	tmp.setRawBits(rawTmp);
+
 	return (tmp);
 }
 
 const Fixed	&Fixed::operator++()
 {
 	++this->rawBits;
+
 	return (*this);
 }
 
@@ -121,12 +127,14 @@ const Fixed	Fixed::operator++(int)
 	Fixed	tmp (*this);
 
 	++this->rawBits;
+
 	return (tmp);
 }
 
 const Fixed	&Fixed::operator--()
 {
 	--this->rawBits;
+
 	return (*this);
 }
 
@@ -135,6 +143,7 @@ const Fixed	Fixed::operator--(int)
 	Fixed	tmp (*this);
 
 	--this->rawBits;
+
 	return (tmp);
 }
 
@@ -167,6 +176,7 @@ Fixed	&Fixed::min(Fixed &fix1, Fixed &fix2)
 {
 	if (fix1 < fix2)
 		return (fix1);
+
 	return (fix2);
 }
 
@@ -174,6 +184,7 @@ const Fixed	&Fixed::min(const Fixed &fix1, const Fixed &fix2)
 {
 	if (fix1 < fix2)
 		return (fix1);
+
 	return (fix2);
 }
 
@@ -181,6 +192,7 @@ Fixed	&Fixed::max(Fixed &fix1, Fixed &fix2)
 {
 	if (fix1 > fix2)
 		return (fix1);
+
 	return (fix2);
 }
 
@@ -188,6 +200,7 @@ const Fixed	&Fixed::max(const Fixed &fix1, const Fixed &fix2)
 {
 	if (fix1 > fix2)
 		return (fix1);
+
 	return (fix2);
 }
 

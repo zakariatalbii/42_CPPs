@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 15:32:34 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/22 16:09:11 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 18:14:32 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ int	main(void)
 
 	std::cout << Fixed::max( a, b ) << std::endl;
 
-	return 0;
+	return (0);
 }

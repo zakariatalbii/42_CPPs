@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 15:32:34 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/22 00:45:14 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 18:11:46 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ Fixed	&Fixed::operator=(const Fixed &src)
 {
 	std::cout << "Copy assignment operator called\n";
 	rawBits = src.getRawBits();
+
 	return (*this);
 }
 
