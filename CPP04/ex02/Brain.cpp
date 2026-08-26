@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 08:30:04 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/22 15:34:01 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 18:32:24 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@ Brain	&Brain::operator=(const Brain &src)
 	std::cout << "Brain copy assignment operator called\n";
 	for (int i (0); i < 100; i++)
 		ideas[i] = src.ideas[i];
+
 	return (*this);
 }

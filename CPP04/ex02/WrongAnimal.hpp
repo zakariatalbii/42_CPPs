@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 08:30:04 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/22 13:13:16 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 18:33:39 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class WrongAnimal
 {
 	protected:
 		std::string	type;
+
 	public:
 		WrongAnimal();
 		WrongAnimal(const WrongAnimal &src);
