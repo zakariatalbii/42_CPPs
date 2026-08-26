@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 08:30:04 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/22 20:47:50 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 18:17:39 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &src)
 	hitPoints = src.hitPoints;
 	energyPoints = src.energyPoints;
 	attackDamage = src.attackDamage;
+
 	return (*this);
 }
 

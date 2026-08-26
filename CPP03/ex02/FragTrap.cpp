@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 10:29:12 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/22 00:04:20 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 18:18:04 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ FragTrap	&FragTrap::operator=(const FragTrap &src)
 	hitPoints = src.hitPoints;
 	energyPoints = src.energyPoints;
 	attackDamage = src.attackDamage;
+
 	return (*this);
 }
 
