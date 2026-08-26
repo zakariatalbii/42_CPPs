@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 19:34:13 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/13 21:35:58 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 18:04:34 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ static void	rePlace(std::ofstream &oFile, std::string &s,
 	while (true)
 	{
 		found = s.find(s1, pos);
+
 		if (found != std::string::npos)
 			oFile << s.substr(pos, found - pos) << s2;
 		else
@@ -29,6 +30,7 @@ static void	rePlace(std::ofstream &oFile, std::string &s,
 			oFile << s.substr(pos);
 			break ;
 		}
+
 		pos = found + s1.length();
 	}
 }
@@ -42,6 +44,7 @@ void	contentCopy(std::ifstream &iFile, std::ofstream &oFile,
 	{
 		if (!std::getline(iFile, s, '\0'))
 			break ;
+
 		if (s1.length())
 			rePlace(oFile, s, s1, s2);
 		else

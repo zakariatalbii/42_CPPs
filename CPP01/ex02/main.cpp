@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 00:38:17 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/13 21:22:17 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 18:02:35 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ int	main(void)
 	std::cout << stringVAR << '\n';
 	std::cout << *stringPTR << '\n';
 	std::cout << stringREF << '\n';
+
 	return (0);
 }

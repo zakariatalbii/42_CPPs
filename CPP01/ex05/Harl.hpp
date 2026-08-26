@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 04:46:32 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/06 06:40:34 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 18:06:15 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Harl
 		void	info(void);
 		void	warning(void);
 		void	error(void);
+
 	public:
 		Harl();
 		~Harl();

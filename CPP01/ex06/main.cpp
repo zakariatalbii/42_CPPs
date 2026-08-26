@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 04:45:00 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/07 00:14:50 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 18:08:23 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int	main(int argc, char **argv)
 		int i (0);
 		while (i < 4 && levels[i] != arg)
 			i++;
+
 		switch (i)
 		{
 			case 0:
@@ -57,5 +58,6 @@ int	main(int argc, char **argv)
 				std::cout << "[ Probably complaining about insignificant problems ]\n";
 		}
 	}
+
 	return (0);
 }

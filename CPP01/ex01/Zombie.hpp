@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/03 17:23:18 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/05 00:20:28 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 18:01:47 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Zombie
 {
 	private:
 		std::string	name;
+
 	public:
 		Zombie();
 		Zombie(const std::string &zombieName);

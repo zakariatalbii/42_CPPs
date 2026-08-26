@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 04:46:32 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/16 04:30:34 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 18:05:59 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ void	Harl::complain(std::string level)
 		"WARNING",
 		"ERROR"
 	};
+
 	void	(Harl::*complainLevel[4])(void) =
 	{
 		&Harl::debug,

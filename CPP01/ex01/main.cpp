@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 20:06:07 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/08 02:14:05 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 18:01:23 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,11 @@ int	main(void)
 
 	if (!zombiePutin)
 		return (1);
+
 	for (int i (0); i < N; i++)
 		zombiePutin[i].announce();
+
 	delete[] zombiePutin;
+
 	return (0);
 }

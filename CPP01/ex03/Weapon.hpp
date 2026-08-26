@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 01:39:18 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/05 19:06:31 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 18:03:40 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Weapon
 {
 	private:
 		std::string	type;
+
 	public:
 		Weapon(const std::string &weaponType);
 		~Weapon();
