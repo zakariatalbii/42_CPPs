@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/22 18:16:47 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/06/20 18:32:21 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 19:33:18 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,6 @@ int	main(int argc, char **argv)
 		ScalarConverter::convert(argv[1]);
 	else
 		std::cout << "invalid input\n";
+
 	return (0);
 }

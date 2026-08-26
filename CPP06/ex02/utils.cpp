@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/22 18:16:47 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/06/26 14:00:57 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 19:37:16 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ void	identify(Base &p)
 	catch (std::exception &e)
 	{
     }
+
 	try
 	{
 		(void)dynamic_cast<B &>(p);
@@ -52,6 +53,7 @@ void	identify(Base &p)
 	catch (std::exception &e)
 	{
     }
+
 	try
 	{
 		(void)dynamic_cast<C &>(p);

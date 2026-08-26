@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/22 18:16:47 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/06/21 20:37:09 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 19:35:25 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@ ScalarConverter::Type	detectType(std::string const &s)
 {
 	if (s.length() == 3 && s[0] == '\'' && s[2] == '\'')
 		return (ScalarConverter::CHAR);
+
 	if (s == "-inff" || s == "+inff" || s == "nanf"
 		|| s == "-inf" || s == "+inf" || s == "nan")
         return (ScalarConverter::PSEUDO);
+
 	if (s.find_first_not_of("-+0123456789.f") == std::string::npos
 		&& s.find_first_of("0123456789") != std::string::npos
 		&& (s.find_first_of('-') == std::string::npos
@@ -30,12 +32,15 @@ ScalarConverter::Type	detectType(std::string const &s)
 	{
 		if (s.find_first_of(".f") == std::string::npos)
 			return (ScalarConverter::INT);
+
 		if (s.find_first_of("f") == std::string::npos)
 			return (ScalarConverter::DOUBLE);
+
 		if (s.find_first_of(".") != std::string::npos
 			&& s[s.length() - 1] == 'f')
 			return (ScalarConverter::FLOAT);
 	}
+
 	return (ScalarConverter::INVALID);
 }
 
@@ -53,6 +58,7 @@ void	displayInt(int i)
 		std::cout << "char: '" << static_cast<char>(i) << "'\n";
 	else
 		std::cout << "char: Non displayable\n";
+
 	std::cout << "int: " << i << '\n'
 		<< "float: " << static_cast<float>(i) << ".0f\n"
 		<< "double: " << static_cast<double>(i) << ".0\n";
@@ -67,10 +73,12 @@ void	displayFloat(float f)
 		std::cout << "char: '" << static_cast<char>(i) << "'\n";
 	else
 		std::cout << "char: Non displayable\n";
+
 	if (f <= static_cast<float>(INT_MAX) && f >= static_cast<float>(INT_MIN))
 		std::cout << "int: " << i << '\n';
 	else
 		std::cout << "int: impossible\n";
+
 	if (i == f)
 		std::cout << "float: " << f << ".0f\n"
 			<< "double: " << static_cast<double>(f) << ".0\n";
@@ -88,10 +96,12 @@ void	displayDouble(double d)
 		std::cout << "char: '" << static_cast<char>(i) << "'\n";
 	else
 		std::cout << "char: Non displayable\n";
+
 	if (d <= static_cast<float>(INT_MAX) && d >= static_cast<float>(INT_MIN))
 		std::cout << "int: " << i << '\n';
 	else
 		std::cout << "int: impossible\n";
+
 	if (i == d)
 	{
 		if (d <= static_cast<double>(FLT_MAX) && d >= static_cast<double>(-FLT_MAX))
@@ -114,6 +124,7 @@ void	displayPseudo(std::string const &s)
 {
 	std::cout << "char: impossible\n"
 		<< "int: impossible\n";
+
 	if (s == "-inff" || s == "+inff"
 		|| s == "-inf" || s == "+inf")
 		std::cout << "float: " << s[0] << "inff\n"

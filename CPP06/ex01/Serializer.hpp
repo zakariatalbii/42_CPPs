@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/22 18:12:11 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/06/21 20:05:20 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 19:36:16 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class Serializer
 		Serializer(Serializer const &);
 		~Serializer();
 		Serializer	&operator=(Serializer &);
+
 	public:
 		static uintptr_t	serialize(Data *);
 		static Data			*deserialize(uintptr_t);
