@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 17:00:10 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/05/06 19:16:19 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 19:14:32 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class AForm
 		const int			_signGrade;
 		const int			_executeGrade;
 		virtual void		_executeAction()	const = 0;
+
 	public:
 		AForm();
 		AForm(const AForm &);
@@ -40,11 +41,13 @@ class AForm
 		int					getExecuteGrade()	const;
 		void				beSigned(const Bureaucrat &);
 		void				execute(Bureaucrat const &)	const;
+
 		class GradeTooHighException : public std::exception
 		{
 			public:
 				const char	*what()	const throw();
 		};
+
 		class GradeTooLowException : public std::exception
 		{
 			public:

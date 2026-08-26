@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 17:00:16 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/05/06 19:16:19 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 19:16:47 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ ShrubberyCreationForm	&ShrubberyCreationForm::operator=(const ShrubberyCreationF
 		AForm::operator=(other);
 		_target = other._target;
 	}
+
 	return (*this);
 }
 
@@ -47,6 +48,7 @@ void	ShrubberyCreationForm::_executeAction()	const
 
 	if (!fTree.is_open())
 		throw std::runtime_error ("Cannot open file");
+
 	fTree << "               ,@@@@@@@,\n";
 	fTree << "       ,,,.   ,@@@@@@/@@,  .oo8888o.\n";
 	fTree << "    ,&%%&%&&%,@@@@@/@@@@@@,8888\\88/8o\n";
@@ -57,5 +59,6 @@ void	ShrubberyCreationForm::_executeAction()	const
 	fTree << "       |o|        | |         | |\n";
 	fTree << "       |.|        | |         | |\n";
 	fTree << "    \\\\/ ._\\//_/__/  ,\\_//__\\\\/.  \\_//__/_\n";
+
 	fTree.close();
 }

@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 17:00:16 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/05/06 20:14:26 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 19:22:52 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ AForm	*Intern::makeForm(const std::string &formName, const std::string &formTarg
 		"robotomy request",
 		"presidential pardon"
 	};
+
 	AForm	*(Intern::*make[])(const std::string &) =
 	{
 		&Intern::_makeShrubberyCreationForm,
@@ -64,9 +65,12 @@ AForm	*Intern::makeForm(const std::string &formName, const std::string &formTarg
 		if (forms[i] == formName)
 		{
 			std::cout << "Intern creates " << formName << '\n';
+
 			return ((this->*make[i])(formTarget));
 		}
 	}
+
 	std::cout << formName << " form does not exist\n";
+
 	return (NULL);
 }

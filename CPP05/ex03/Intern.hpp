@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 17:00:10 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/05/06 18:50:16 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 19:23:07 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Intern
 		AForm	*_makeShrubberyCreationForm(const std::string &);
 		AForm	*_makeRobotomyRequestForm(const std::string &);
 		AForm	*_makePresidentialPardonForm(const std::string &);
+
 	public:
 		Intern();
 		Intern(const Intern &);

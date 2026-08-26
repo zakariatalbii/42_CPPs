@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 17:00:16 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/05/06 19:16:19 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 19:15:39 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ PresidentialPardonForm	&PresidentialPardonForm::operator=(const PresidentialPard
 		AForm::operator=(other);
 		_target = other._target;
 	}
+
 	return (*this);
 }
 

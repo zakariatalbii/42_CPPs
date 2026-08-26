@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 17:00:10 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/04/26 19:46:55 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 19:12:57 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Bureaucrat
 	private:
 		const std::string	_name;
 		int					_grade;
+
 	public:
 		Bureaucrat();
 		Bureaucrat(const Bureaucrat &);
@@ -32,11 +33,13 @@ class Bureaucrat
 		int					getGrade()	const;
 		void				incrementGrade();
 		void				decrementGrade();
+
 		class GradeTooHighException : public std::exception
 		{
 			public:
 				const char	*what()	const throw();
 		};
+
 		class GradeTooLowException : public std::exception
 		{
 			public:

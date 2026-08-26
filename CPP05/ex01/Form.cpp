@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 17:00:16 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/05/01 17:40:58 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 19:13:15 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ Form	&Form::operator=(const Form &other)
 {
 	if (this != &other)
 		_isSigned = other._isSigned;
+
 	return (*this);
 }
 

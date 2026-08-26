@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 17:00:16 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/05/06 19:16:19 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 19:20:51 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ AForm	&AForm::operator=(const AForm &other)
 {
 	if (this != &other)
 		_isSigned = other._isSigned;
+
 	return (*this);
 }
 
@@ -79,6 +80,7 @@ void	AForm::execute(Bureaucrat const &executor)	const
 		throw std::logic_error ("Form is not signed");
 	else if (executor.getGrade() > _executeGrade)
 		throw GradeTooLowException ();
+
 	_executeAction();
 }
 

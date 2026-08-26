@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 17:00:16 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/05/06 19:16:19 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 19:23:56 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,14 @@ RobotomyRequestForm	&RobotomyRequestForm::operator=(const RobotomyRequestForm &o
 		AForm::operator=(other);
 		_target = other._target;
 	}
+
 	return (*this);
 }
 
 void	RobotomyRequestForm::_executeAction()	const
 {
 	std::cout << "*drilling noises*\n";
+
 	if (rand() % 2 == 0)
 		std::cout << _target << " has been robotomized successfully\n";
 	else

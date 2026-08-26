@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 17:00:10 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/04/27 20:58:50 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 19:13:35 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class Form
 		bool				_isSigned;
 		const int			_signGrade;
 		const int			_executeGrade;
+
 	public:
 		Form();
 		Form(const Form &);
@@ -38,11 +39,13 @@ class Form
 		int					getSignGrade()	const;
 		int					getExecuteGrade()	const;
 		void				beSigned(const Bureaucrat &);
+
 		class GradeTooHighException : public std::exception
 		{
 			public:
 				const char	*what()	const throw();
 		};
+
 		class GradeTooLowException : public std::exception
 		{
 			public:
