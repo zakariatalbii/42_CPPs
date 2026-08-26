@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/14 16:29:00 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/07/15 21:43:38 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 20:02:31 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ MutantStack<T>	&MutantStack<T>::operator=(MutantStack<T> const &other)
 {
 	if (this != &other)
 		std::stack<T>::operator=(other);
+
 	return (*this);
 }
 

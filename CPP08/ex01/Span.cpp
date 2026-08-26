@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/14 16:29:00 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/07/15 19:24:57 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 20:01:18 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ Span	&Span::operator=(const Span &other)
 {
 	if (this != &other)
 		_vec = other._vec;
+
 	return (*this);
 }
 
@@ -41,6 +42,7 @@ void	Span::addNumber(int num)
 {
 	if (_vec.size() == _vec.capacity())
 		throw std::runtime_error ("Span is full");
+
 	_vec.push_back(num);
 }
 
@@ -56,9 +58,11 @@ unsigned int	Span::shortestSpan()	const
 	unsigned int						span;
 	
 	span = static_cast<unsigned int>(*(it + 1) - *it);
+
 	while (++it + 1 != tmp.end())
 		span = std::min(span,
 				static_cast<unsigned int>(*(it + 1) - *it));
+
 	return (span);
 }
 
@@ -66,6 +70,7 @@ unsigned int	Span::longestSpan()	const
 {
 	if (_vec.size() < 2)
 		throw std::runtime_error ("Not enough numbers");
+
 	return (static_cast<unsigned int>(
 		*std::max_element(_vec.begin(), _vec.end())
 		- *std::min_element(_vec.begin(), _vec.end())));
