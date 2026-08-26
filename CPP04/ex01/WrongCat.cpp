@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 08:30:04 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/22 13:17:32 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 18:31:50 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ WrongCat	&WrongCat::operator=(const WrongCat &src)
 {
 	std::cout << "WrongCat copy assignment operator called\n";
 	type = src.type;
+
 	return (*this);
 }
 

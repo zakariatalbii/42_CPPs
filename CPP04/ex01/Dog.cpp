@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 08:30:04 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/22 17:03:46 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 18:27:38 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ Dog	&Dog::operator=(const Dog &src)
 	std::cout << "Dog copy assignment operator called\n";
 	type = src.type;
 	*brain = *src.brain;
+
 	return (*this);
 }
 

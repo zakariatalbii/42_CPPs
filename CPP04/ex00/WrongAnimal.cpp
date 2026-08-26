@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 08:30:04 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/22 13:10:13 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 18:25:40 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ WrongAnimal	&WrongAnimal::operator=(const WrongAnimal &src)
 {
 	std::cout << "WrongAnimal copy assignment operator called\n";
 	type = src.type;
+
 	return (*this);
 }
 
@@ -43,5 +44,6 @@ void	WrongAnimal::makeSound()	const
 const std::string	&WrongAnimal::getType()	const
 {
 	std::cout << "WrongAnimal getType called\n";
+
 	return (type);
 }

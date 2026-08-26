@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 08:30:04 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/22 16:58:17 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 18:27:18 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ Cat	&Cat::operator=(const Cat &src)
 	std::cout << "Cat copy assignment operator called\n";
 	type = src.type;
 	*brain = *src.brain;
+
 	return (*this);
 }
 
