@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 16:59:19 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/08 00:39:43 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 17:51:01 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _PHONEBOOK_HPP_
-# define _PHONEBOOK_HPP_
+#include "utils.hpp"
 
-# include <iostream>
-# include <iomanip>
-# include <string>
-# include <cctype>
-# include "Contact.hpp"
-# include "PhoneBook.hpp"
+int	main(void)
+{
+	std::string	cmd;
+	PhoneBook	phoneBook;
 
-bool	getLine(std::string &str);
-bool	prompt(std::string &str);
-bool	emptyField(const std::string &str);
-bool	isNum(std::string &str);
-char	tenChar(const std::string &str);
-int		promptIndex(int i);
+	while (true)
+	{
+		if (!prompt(cmd))
+			break ;
 
-#endif
+		if (cmd == "ADD")
+			phoneBook.add();
+		else if (cmd == "SEARCH")
+			phoneBook.search();
+		else if (cmd == "EXIT")
+			break ;
+	}
+
+	return (0);
+}

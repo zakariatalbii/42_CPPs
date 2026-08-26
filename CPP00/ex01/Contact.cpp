@@ -6,11 +6,11 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 16:59:19 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/03 13:21:06 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 17:51:25 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "phonebook.hpp"
+#include "utils.hpp"
 
 Contact::Contact()
 {
@@ -32,6 +32,7 @@ bool	Contact::set(int i)
 		return (false);
 	else if (i == 4 && (!getLine(darkestSecret) || emptyField(darkestSecret)))
 		return (false);
+
 	return (true);
 }
 
@@ -45,5 +46,6 @@ const std::string	&Contact::get(int i)	const
 		return (nickname);
 	else if (i == 3)
 		return (phoneNumber);
+
 	return (darkestSecret);
 }

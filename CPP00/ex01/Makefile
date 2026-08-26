@@ -1,4 +1,4 @@
-SRCS = phonebook.cpp Contact.cpp PhoneBook.cpp utils.cpp
+SRCS = main.cpp Contact.cpp PhoneBook.cpp utils.cpp
 
 OBJS= $(SRCS:.cpp=.o)
 
@@ -8,7 +8,7 @@ CC = c++ -Wall -Wextra -Werror -std=c++98
 
 RM = rm -f
 
-%.o: %.cpp phonebook.hpp Contact.hpp PhoneBook.hpp
+%.o: %.cpp Contact.hpp PhoneBook.hpp utils.hpp
 	$(CC) -c $< -o $@
 
 all: $(NAME)

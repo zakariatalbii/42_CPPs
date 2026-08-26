@@ -6,14 +6,14 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 16:59:19 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/01/03 13:21:22 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 16:57:55 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
-# include "phonebook.hpp"
+# include "utils.hpp"
 
 class Contact
 {
@@ -23,6 +23,7 @@ class Contact
 		std::string	nickname;
 		std::string	phoneNumber;
 		std::string	darkestSecret;
+
 	public:
 		Contact();
 		~Contact();
