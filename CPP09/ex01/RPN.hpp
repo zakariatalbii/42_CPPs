@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/20 14:41:35 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/07/25 20:17:25 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 20:07:44 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 class RPN
 {
 	private:
-		std::stack<int>	_stack;
+		std::stack<double>	_stack;
 
 		enum TokenType
 		{

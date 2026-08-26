@@ -6,7 +6,7 @@
 /*   By: zatalbi <zatalbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/20 14:41:37 by zatalbi           #+#    #+#             */
-/*   Updated: 2026/07/25 20:16:14 by zatalbi          ###   ########.fr       */
+/*   Updated: 2026/08/26 20:11:00 by zatalbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ RPN	&RPN::operator=(const RPN &other)
 {
 	if (this != &other)
 		_stack = other._stack;
+
 	return (*this);
 }
 
@@ -73,13 +74,13 @@ bool	RPN::applyOperator(char op)
 	if (_stack.size() < 2)
 		return (false);
 
-	int	second = _stack.top();
+	double	second = _stack.top();
 	_stack.pop();
 
-	int	first = _stack.top();
+	double	first = _stack.top();
 	_stack.pop();
 
-	int	result;
+	double	result;
 
 	switch (op)
 	{
